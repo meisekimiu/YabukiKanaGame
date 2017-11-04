@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
+require_relative 'src/game_window'
 
-puts "LA LA LA~♪"
+GameWindow.new(640,480).show
