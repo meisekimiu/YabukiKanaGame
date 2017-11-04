@@ -32,4 +32,8 @@ class Vector2
 			self
 		end
 	end
+
+	def magnitude
+		Math.sqrt(@x**2+@y**2)
+	end
 end
