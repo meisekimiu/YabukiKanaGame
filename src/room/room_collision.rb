@@ -14,4 +14,10 @@ class RoomCollision
 			rect.contains?(val)
 		end.any?
 	end
+
+	def intersects?(val)
+		@rects.map do |rect|
+			rect.intersects?(val)
+		end.any?
+	end
 end

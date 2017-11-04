@@ -64,7 +64,9 @@ class Rect
 	def intersects?(rect)
 		if(is_rect? rect)
 			return rect.corners.map do |vect|
-				contains? vect
+				vect.x > @position.x && vect.y > @position.y && vect.x < @position.x+@size.x && vect.y < @position.y+@size.y
+			end.any? || corners.map do |vect|
+				vect.x > rect.x && vect.y > rect.y && vect.x < rect.x+rect.w && vect.y < rect.y+rect.h
 			end.any?
 		end
 		false
